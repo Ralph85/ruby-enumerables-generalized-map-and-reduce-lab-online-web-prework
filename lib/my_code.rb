@@ -1,8 +1,6 @@
 def make_sandwich(elelment1, element2)
-  base = "A #{elelment1} and #{element2}"
-  yield(base)
+  yield("A #{elelment1} and #{element2} sandwich")
 end
 
-make_sandwich("gator", "gumbo") do |innards|
-  "#{innards} on rye"
+make_sandwich("grits", "abject terror") { |innards| "#{innards} on rye"}
 end
